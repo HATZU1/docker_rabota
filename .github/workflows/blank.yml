@@ -15,3 +15,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: docker build -t ghcr.io/hatzu1/test-python-app:1.0 .
+      - run: docker push ghcr.io/hatzu1/test-python-app:1.0
